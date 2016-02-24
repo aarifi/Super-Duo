@@ -1,0 +1,102 @@
+#
+# generated on 2016/02/24 12:33:42
+#
+# --table-start--
+dataClass=barqsoft.footballscores.model.TeamsModel
+tableName=teamsmodel
+# --table-fields-start--
+# --field-start--
+fieldName=id
+id=true
+# --field-end--
+# --field-start--
+fieldName=squadMarketValue
+# --field-end--
+# --field-start--
+fieldName=crestUrl
+# --field-end--
+# --field-start--
+fieldName=name
+# --field-end--
+# --field-start--
+fieldName=shortName
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=barqsoft.footballscores.model.LeagueSeasonsModel
+tableName=leagueseasonsmodel
+# --table-fields-start--
+# --field-start--
+fieldName=id
+id=true
+# --field-end--
+# --field-start--
+fieldName=numberOfGames
+# --field-end--
+# --field-start--
+fieldName=numberOfTeams
+# --field-end--
+# --field-start--
+fieldName=lastUpdated
+# --field-end--
+# --field-start--
+fieldName=currentMatchday
+# --field-end--
+# --field-start--
+fieldName=year
+# --field-end--
+# --field-start--
+fieldName=caption
+# --field-end--
+# --field-start--
+fieldName=league
+# --field-end--
+# --field-start--
+fieldName=numberOfMatchdays
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=barqsoft.footballscores.model.FixturesModelForLocal
+tableName=fixturesmodelforlocal
+# --table-fields-start--
+# --field-start--
+fieldName=id
+id=true
+# --field-end--
+# --field-start--
+fieldName=awayTeamId
+# --field-end--
+# --field-start--
+fieldName=status
+# --field-end--
+# --field-start--
+fieldName=soccerseasonId
+# --field-end--
+# --field-start--
+fieldName=homeTeamId
+# --field-end--
+# --field-start--
+fieldName=matchday
+# --field-end--
+# --field-start--
+fieldName=awayTeamName
+# --field-end--
+# --field-start--
+fieldName=date
+# --field-end--
+# --field-start--
+fieldName=homeTeamName
+# --field-end--
+# --field-start--
+fieldName=goalsHomeTeam
+# --field-end--
+# --field-start--
+fieldName=goalsAwayTeam
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################

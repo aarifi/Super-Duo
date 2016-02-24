@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+  >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recView_list_of_books"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:elevation="@dimen/recyclerview_elevation"
+        android:padding="@dimen/padding_gridView" />
+
+</LinearLayout>

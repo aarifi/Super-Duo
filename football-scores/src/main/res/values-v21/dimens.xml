@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="image_team_photo_width">30dp</dimen>
+    <dimen name="image_team_photo_height">30dp</dimen>
+    <dimen name="image_team_photo_item_layout_margin">12dp</dimen>
+    <dimen name="padding_recyclerView">4dp</dimen>
+    <dimen name="txt_result_margin">10dp</dimen>
+    <dimen name="text_size_comingsoon">20sp</dimen>
+</resources>

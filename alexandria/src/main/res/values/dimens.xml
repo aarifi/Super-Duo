@@ -1,0 +1,23 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <integer name="ean_size">13</integer>
+    <integer name="ean_width">8</integer>
+    <dimen name="head_line">24sp</dimen>
+    <dimen name="small_fontsize">12sp</dimen>
+
+    <!-- Per the design guidelines, navigation drawers should be between 240dp and 320dp:
+         https://developer.android.com/design/patterns/navigation-drawer.html -->
+    <dimen name="navigation_drawer_width">240dp</dimen>
+
+
+    <dimen name="layout_grid_item_height">240dp</dimen>
+    <dimen name="layout_grid_item_padding">3dp</dimen>
+    <dimen name="cardview_grid_itemRadius">2dp</dimen>
+    <dimen name="cardView_grid_item_Elevation">2sp</dimen>
+    <dimen name="textView_gird_item_title_paddingLeftRightTop">16dp</dimen>
+    <dimen name="textView_gird_item_Overview_paddingLeftRightTop">16dp</dimen>
+    <dimen name="textView_grid_item_title_textSize">16sp</dimen>
+    <dimen name="textView_textSize_grid_item">12sp</dimen>
+    <dimen name="recyclerview_elevation">5dp</dimen>
+    <dimen name="padding_gridView">4dp</dimen>
+</resources>

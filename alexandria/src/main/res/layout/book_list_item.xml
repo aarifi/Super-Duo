@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/layout_grid_item_height"
+
+    android:orientation="vertical"
+    android:padding="@dimen/layout_grid_item_padding">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        card_view:cardBackgroundColor="@android:color/white"
+        card_view:cardCornerRadius="@dimen/cardview_grid_itemRadius"
+        card_view:cardElevation="@dimen/cardView_grid_item_Elevation">
+
+        <ImageView
+            android:id="@+id/img_item_book"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txttitle_item_book"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:paddingLeft="@dimen/textView_gird_item_title_paddingLeftRightTop"
+                android:paddingRight="@dimen/textView_gird_item_title_paddingLeftRightTop"
+                android:paddingTop="@dimen/textView_gird_item_title_paddingLeftRightTop"
+                android:singleLine="true"
+                android:text="@string/str_title_book_example"
+                android:textSize="@dimen/textView_grid_item_title_textSize" />
+
+            <TextView
+                android:id="@+id/txt_item_author"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:paddingLeft="@dimen/textView_gird_item_Overview_paddingLeftRightTop"
+                android:paddingRight="@dimen/textView_gird_item_Overview_paddingLeftRightTop"
+                android:singleLine="true"
+                android:text="@string/str_author"
+
+                android:textSize="@dimen/textView_textSize_grid_item" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    >
+
+</LinearLayout>

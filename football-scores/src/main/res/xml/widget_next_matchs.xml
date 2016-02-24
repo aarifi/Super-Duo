@@ -1,0 +1,11 @@
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minResizeHeight="@dimen/widget_scores_default_height"
+    android:minResizeWidth="@dimen/widget_scores_default_width"
+    android:minHeight="@dimen/widget_scores_default_height"
+    android:minWidth="@dimen/widget_scores_default_width"
+    android:updatePeriodMillis="86400000"
+    android:previewImage="@drawable/widget_next"
+    android:initialLayout="@layout/widget_next_match"
+    android:resizeMode="horizontal|vertical"
+    android:widgetCategory="home_screen|keyguard">
+</appwidget-provider>

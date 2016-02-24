@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".ui.activity.AddBook">
+
+
+    <EditText
+        android:id="@+id/edittext_isbn_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:hint="@string/input_hint"
+        android:inputType="number"
+        android:maxLength="@integer/ean_size"
+        android:maxLines="1"
+        android:minEms="@integer/ean_width"
+        android:paddingRight="20dp"
+        android:saveEnabled="true" />
+
+    <Button
+        android:id="@+id/button_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eancontainer"
+        android:layout_toRightOf="@+id/edittext_isbn_number"
+        android:text="@string/search" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/scan_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:foregroundGravity="right"
+        android:text="@string/scan_button" />
+
+
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/framelayout_widget_next_match"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/relativLayout_header"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/primary">
+
+            <ImageView
+                android:id="@+id/imageview_widget_appicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:src="@drawable/ic_launcher" />
+
+            <TextView
+                android:id="@+id/txt_widget_datetime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@+id/imageview_widget_appicon"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="right"
+                android:text="List of today's matches"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_size_widget_title" />
+
+            <ImageButton
+                android:id="@+id/imageButton_widget_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_refresh_white_24dp" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/widget_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/no_data"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:visibility="invisible" />
+
+        <ListView
+            android:id="@+id/listView_widget_nextMatch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relativLayout_header"
+            android:divider="@color/accent"
+            android:dividerHeight="0dp"
+            tools:listitem="@layout/widget_match_item" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

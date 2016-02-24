@@ -1,0 +1,35 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="list_horizonal_matgin">2dp</dimen>
+    <dimen name="share_button_margin">150dp</dimen>
+    <dimen name="TeamNames">17sp</dimen>
+    <dimen name="Score">35sp</dimen>
+    <dimen name="League">15sp</dimen>
+    <dimen name="layout_match_item_height">100dp</dimen>
+    <dimen name="layout_match_item_padding">3dp</dimen>
+    <dimen name="cardview_grid_itemRadius">2dp</dimen>
+    <dimen name="cardView_grid_item_Elevation">2dp</dimen>
+
+
+    <dimen name="textView_gird_item_title_paddingLeftRightTop">16dp</dimen>
+    <dimen name="textView_gird_item_Overview_paddingLeftRightTop">16dp</dimen>
+    <dimen name="textView_grid_item_title_textSize">16sp</dimen>
+    <dimen name="image_team_photo_width">30dp</dimen>
+    <dimen name="image_team_photo_height">30dp</dimen>
+    <dimen name="image_team_photo_item_layout_margin">12dp</dimen>
+    <dimen name="padding_recyclerView">4dp</dimen>
+    <dimen name="app_bar_height">200dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="txt_result_margin">10dp</dimen>
+    <dimen name="text_size_comingsoon">20sp</dimen>
+    <dimen name="txtSize_teamName_details">15sp</dimen>
+    <dimen name="txt_size_item_team_name">13sp</dimen>
+    <dimen name="txt_size_widget_title">18sp</dimen>
+
+
+    <dimen name="widget_scores_default_height">180dp</dimen>
+    <dimen name="widget_scores_default_width">250dp</dimen>
+</resources>
