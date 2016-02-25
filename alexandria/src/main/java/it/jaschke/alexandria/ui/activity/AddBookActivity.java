@@ -111,7 +111,10 @@ public class AddBookActivity extends AppCompatActivity {
         booksModelLocal = (BooksModel) bundle.getParcelable(Constants.LIST_RESPONS_BOOK_INTENT_KEY);
 
         //set data to view
-        Glide.with(this).load(booksModelLocal.getImageLinks()).into(imageView_add_book);
+        if (booksModelLocal.getImageLinks() != null) {
+            Glide.with(this).load(booksModelLocal.getImageLinks()).into(imageView_add_book);
+
+        }
         txt_add_book_title.setText(booksModelLocal.getTitle());
         txt_add_book_publisher_value.setText(booksModelLocal.getPublisher());
         txt_add_book_publishedDate_value.setText(booksModelLocal.getPublishedDate());
@@ -131,9 +134,12 @@ public class AddBookActivity extends AppCompatActivity {
 
 
         //set data to view
-        Glide.with(this).load(imageLinks.getThumbnail())
-                .error(R.drawable.content_thumbnail)
-                .into(imageView_add_book);
+        if (imageLinks != null) {
+            Glide.with(this).load(imageLinks.getThumbnail())
+                    .error(R.drawable.content_thumbnail)
+                    .into(imageView_add_book);
+        }
+
         txt_add_book_title.setText(volumeInfo.getTitle());
         txt_add_book_publisher_value.setText(volumeInfo.getPublisher());
         txt_add_book_publishedDate_value.setText(volumeInfo.getPublishedDate());
@@ -157,7 +163,10 @@ public class AddBookActivity extends AppCompatActivity {
         }
         booksModel.setTitle(volumeInfo.getTitle());
         booksModel.setAuthor(setAuthors());
-        booksModel.setImageLinks(imageLinks.getThumbnail());
+        if (imageLinks != null) {
+            booksModel.setImageLinks(imageLinks.getThumbnail());
+        }
+
         booksModel.setPublisher(volumeInfo.getPublisher());
         booksModel.setPublishedDate(volumeInfo.getPublishedDate());
         booksModel.setDescription(volumeInfo.getDescription());

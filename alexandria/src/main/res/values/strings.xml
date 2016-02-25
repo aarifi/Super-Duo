@@ -103,4 +103,5 @@
     <string name="book_save">Book Save local.</string>
     <string name="book_delete">Delete</string>
     <string name="action_search">Search</string>
+    <string name="not_internet">No access to the internet?</string>
 </resources>

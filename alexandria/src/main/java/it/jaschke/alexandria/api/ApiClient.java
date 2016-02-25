@@ -12,6 +12,7 @@ import it.jaschke.alexandria.utils.Constants;
 import retrofit.ErrorHandler;
 import retrofit.RequestInterceptor;
 import retrofit.RestAdapter;
+import retrofit.RetrofitError;
 import retrofit.client.Client;
 import retrofit.client.OkClient;
 import retrofit.client.Request;
@@ -52,7 +53,15 @@ public class ApiClient implements RequestInterceptor, Client {
     }
 
     public ListResponseBooks getBook(String bookId) {
-        ListResponseBooks listResponseBooks = getBooksApiInterfaceMethod().getBooks(bookId);
+        ListResponseBooks listResponseBooks = null;
+        try
+        {
+             listResponseBooks = getBooksApiInterfaceMethod().getBooks(bookId);
+        }catch (RetrofitError error)
+        {
+            error.getMessage();
+        }
+
         return listResponseBooks;
     }
 

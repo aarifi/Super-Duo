@@ -31,6 +31,7 @@ import it.jaschke.alexandria.api.ApiClient;
 import it.jaschke.alexandria.model.ListResponseBooks;
 import it.jaschke.alexandria.ui.activity.AddBookActivity;
 import it.jaschke.alexandria.utils.Constants;
+import it.jaschke.alexandria.utils.SupportMethod;
 
 /**
  * Created by AdonisArifi on 11.1.2016 - 2016 . alexandria
@@ -49,7 +50,6 @@ public class FragmentAddBook extends Fragment implements LoaderManager.LoaderCal
     View rootView;
 
     public static FragmentAddBook newInstance(String s) {
-
 
         FragmentAddBook mainFragment = new FragmentAddBook();
         Bundle bundle = new Bundle();
@@ -142,7 +142,7 @@ public class FragmentAddBook extends Fragment implements LoaderManager.LoaderCal
     @Override
     public void onLoadFinished(android.support.v4.content.Loader<ListResponseBooks> loader, ListResponseBooks data) {
         ListResponseBooks listResponseBooks = data;
-        if (listResponseBooks.getTotalItems() >= 1) {
+        if (listResponseBooks != null ) {
             Intent intent = new Intent(getActivity(), AddBookActivity.class);
             Bundle bundle = new Bundle();
             intent.putExtra(Constants.LIST_RESPONS_BOOK_INTENT_KEY, listResponseBooks);
@@ -176,7 +176,7 @@ public class FragmentAddBook extends Fragment implements LoaderManager.LoaderCal
         public ListResponseBooks loadInBackground() {
             ListResponseBooks listResponseBooks = null;
             try {
-                listResponseBooks = ApiClient.getApiClientInstance(getContext()).getBooksApiInterfaceMethod().getBooks(bookId);
+                listResponseBooks = ApiClient.getApiClientInstance(getContext()).getBook(bookId);
 
             } catch (Exception e) {
                 e.getMessage();
@@ -189,20 +189,26 @@ public class FragmentAddBook extends Fragment implements LoaderManager.LoaderCal
 
     @OnClick(R.id.button_search)
     public void setOnClickButtonSearch() {
-        String isbn_digits = edittext_isbn_number.getText().toString();
-        //catch isbn10 numbers
-        if (isbn_digits.length() == 13 && isbn_digits.startsWith("978")) {
-            hideKeybord();
-            getLoaderManager().restartLoader(123, null, this).forceLoad();
+        if (SupportMethod.getSupportMethodInstance(getActivity()).IsConnectNetwork()) {
+            String isbn_digits = edittext_isbn_number.getText().toString();
+            //catch isbn10 numbers
+            if (isbn_digits.length() == 13 && isbn_digits.startsWith("978")) {
+                hideKeybord();
+                getLoaderManager().restartLoader(123, null, this).forceLoad();
 
-        }
-        if (isbn_digits.length() < 13) {
-            hideKeybord();
+            }
+            if (isbn_digits.length() < 13) {
+                hideKeybord();
+                Snackbar snackbar = Snackbar
+                        .make(coordiLayout, getString(R.string.valid_isbn), Snackbar.LENGTH_LONG);
+                snackbar.show();
+
+                return;
+            }
+        } else {
             Snackbar snackbar = Snackbar
-                    .make(coordiLayout, getString(R.string.valid_isbn), Snackbar.LENGTH_LONG);
+                    .make(coordiLayout, getString(R.string.not_internet), Snackbar.LENGTH_LONG);
             snackbar.show();
-
-            return;
         }
 
 

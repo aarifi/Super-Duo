@@ -2,6 +2,8 @@ package it.jaschke.alexandria.utils;
 
 import android.content.Context;
 import android.content.res.Configuration;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 
 /**
  * Created by AdonisArifi on 14.1.2016 - 2016 . alexandria
@@ -12,7 +14,7 @@ public class SupportMethod {
 
     private static SupportMethod supportMethodInstance;
 
-    public SupportMethod getSupportMethodInstance(Context context) {
+    public static  SupportMethod getSupportMethodInstance(Context context) {
         if (supportMethodInstance == null) {
             supportMethodInstance = new SupportMethod(context);
         }
@@ -32,5 +34,13 @@ public class SupportMethod {
 
     public static String getPackageNameOfAplication() {
         return "it.jaschke.alexandria";
+    }
+
+    public boolean IsConnectNetwork() {
+        ConnectivityManager cm = (ConnectivityManager) myContext.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+        return activeNetwork != null &&
+                activeNetwork.isConnectedOrConnecting();
+
     }
 }
