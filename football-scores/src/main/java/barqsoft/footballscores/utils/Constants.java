@@ -8,6 +8,7 @@ public class Constants {
 
     public static final String BASE_URL_FOOTBALL_DATA_API = "http://api.football-data.org/v1";
     public static final String LEAGUE_SEASONS_URL_FOOTBALL_DATA_API = "http://api.football-data.org/v1/soccerseasons/?season=2015";
+    //get your api key from api.footbal-data.org
     public static final String FOOTBALL_DATA_API_KEY = "";
     public static final String FOOTBALL_API_KEY_PARAMETER = "X-Auth-Token";
     public static final String FOOTBALL_API_TIMEFRAME_PARAMETER = "timeFrame";
